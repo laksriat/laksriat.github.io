@@ -11,7 +11,6 @@
     <link rel="icon" href="assets/favicon.ico">
     <link rel="stylesheet" href="css/products.css"/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 </head>
 <body>
     <div id="header"></div>
@@ -33,31 +32,38 @@
         var rows = 0;
         var imagesInRow = 0;
         const collage = document.getElementById("collage");
-        $.ajax({
-            url : imagesFolder,
-            success: function (data) {
-                $(data).find("a").attr("href", function (i, val) {
-                    if( val.match(/\.(jpe?g|png|gif|webp)$/) ) {                   
-                        var column = document.getElementById("column" + imagesInRow);
-                        var node = document.createElement("img");
-                        node.setAttribute("src", imagesFolder + val);
-                        column.appendChild(node);
-                        if (imagesInRow == 2) {
-                            imagesInRow = 0;
-                        }
-                        else {
-                            imagesInRow++;
-                        }
-                    } 
-                });
-            }
-        });
+        loadImages();
         hideLoading();
-        // var elements = document.getElementsByClassName("column");
-        // for (i = 0; i < elements.length; i++) {
-        //     elements[i].style.msFlex = "33%";  // IE10
-        //     elements[i].style.flex = "33%";
-        // }
+
+        async function loadImages() {
+            imagePaths = await getImages();
+            for (i = 0; i < imagePaths.length; i++) {
+                addImgElement(imagesFolder + imagePaths[i], imagesInRow);
+                if (imagesInRow == 2) {
+                    imagesInRow = 0;
+                }
+                else {
+                    imagesInRow++;
+                }
+            }
+        }
+        
+        async function getImages() {
+            var filePaths = [];            
+            await fetch('assets/products/products.txt')
+            .then(response => response.text())
+            .then(data => {
+                filePaths = data.split("\r\n");
+            });
+            return filePaths;
+        }
+
+        function addImgElement(filename, imagesInRow) {
+            var column = document.getElementById("column" + imagesInRow);
+            var node = document.createElement("img");
+            node.setAttribute("src", filename);
+            column.appendChild(node);
+        }
 
         function addRow() {
             var node = document.createElement("div");
