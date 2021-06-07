@@ -1,0 +1,17 @@
+body {
+    /* background: gold; */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+#collage {
+    padding-top: 75px;
+}
+#image1 {
+    margin-top: 10px;
+    margin-left: 20%;
+    width: 60%;
+}

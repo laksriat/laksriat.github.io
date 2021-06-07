@@ -1,0 +1,68 @@
+.loader {
+    display: none;
+}
+.loading {
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+}
+
+.loading::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background: url("/laksri/assets/loading-icon.png") 100px 100px;
+    background-size: contain;
+    opacity: 0.5;
+    border-radius: 50%;
+    animation: loading 1s ease-in-out infinite alternate;
+}
+
+.loading-border {
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+    display: flex;
+    justify-content: center;
+}
+
+.loading-border::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    border: 2px solid #dddddd;
+    border-top-color: #009579;
+    border-bottom-color: #009579;
+    border-radius: 50%;
+    animation: loading-border 1s ease-in-out infinite alternate;
+}
+
+.loading-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@keyframes loading {
+    to {
+        opacity: 1;
+        transform: scale(1.75);
+    }
+}
+
+@keyframes loading-border {
+    to {
+        transform: scale(1.75) rotate(1turn);
+        border: 10px solid #dddddd;
+        border-top-color: #009579;
+        border-bottom-color: #009579;
+    }
+}
