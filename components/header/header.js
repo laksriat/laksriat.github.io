@@ -59,7 +59,7 @@ function addHeaderBody() {
 	if (body != undefined) {
 		body.innerHTML = 
 		`
-		<link rel="stylesheet" href="header.css"/>
+		<link rel="stylesheet" href="/components/header/header.css"/>
 		<div class="nav-header">ලක් ශ්‍රි අත්කම් සල</div>
 		<div class="header">
 			<div class="menu-button" onclick="openNav(this)">
