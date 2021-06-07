@@ -11,7 +11,7 @@
 	content: "";
 	width: 75px;
 	height: 75px;
-	background: url("/laksri/assets/logo.png") 75px 75px;
+	background: url("/assets/logo.png") 75px 75px;
 	background-size: contain;
 }
 
