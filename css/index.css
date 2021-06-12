@@ -2,16 +2,27 @@ body {
     /* background: gold; */
 }
 
+.hidden {
+    display: none;
+}
+
 * {
     box-sizing: border-box;
 }
 
-
 #collage {
     padding-top: 75px;
 }
+
 #image1 {
     margin-top: 10px;
     margin-left: 20%;
     width: 60%;
+}
+
+@media only screen and (max-width: 600px) {
+    #image1 {
+        margin-left: 10%;
+        width: 80%;
+    }
 }

@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laksri Athkam Sela - Music, Bathik, Wood craft &amp; Brass item - Get More</title>
     <meta name="description" content="Laksri Athkam sala - All kind of Music, Bathik, Wooden craft, Hand craft &amp; Brass items Sri Lanka">
-    <meta name="keywords" content="Meepe,Galagedara,Padukka,Gift,Guitar,Music,Instruments,Wood,Craft,Bathik,Handloom,Brass,fashions,Masks,low price">
+    <meta name="keywords" content="Laksri,Athkam,Handicraft,Handicrafts,Laksala,Meepe,Galagedara,Padukka,Gift,Guitar,Music,Instruments,Wood,Craft,Bathik,Handloom,Brass,fashions,Masks,low price">
     <meta name="author" content="Erantha Welikala">
-    <link rel="icon" href="assets/favicon.ico">
-    <link rel="stylesheet" href="css/products.css"/>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="icon" href="/assets/favicon.ico">
+    <link rel="stylesheet" href="/css/products.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-<body>
+<body class="hidden">
     <div id="header"></div>
     <div id="loader"></div>
     <div id="collage">
@@ -23,12 +23,12 @@
             <div class="column" id="column3"></div>
         </div>
     </div>    
-    <script src="components/header/header.js"></script>
-    <script src="components/loader/loader.js"></script>
+    <script src="/components/header/header.js"></script>
+    <script src="/components/loader/loader.js"></script>
 
     <script>
         showLoading();
-        var imagesFolder = "assets/products/";
+        var imagesFolder = "/assets/products/";
         var rows = 0;
         var imagesInRow = 0;
         const collage = document.getElementById("collage");
@@ -50,7 +50,7 @@
         
         async function getImages() {
             var filePaths = [];            
-            await fetch('assets/products/products.txt')
+            await fetch('/assets/products/products.txt')
             .then(response => response.text())
             .then(data => {
                 filePaths = data.split("\r\n");
@@ -78,6 +78,9 @@
             row.appendChild(node);
             return node;
         }
+        $(document).ready(function() {
+            $("body").removeClass("hidden");
+        });
     </script>
 </body>
 </html>

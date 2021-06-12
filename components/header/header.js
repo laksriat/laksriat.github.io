@@ -29,6 +29,12 @@ for (let i = 0; i < 4; ++i) {
 	});
 }
 
+$(document).ready(function() {
+	// $(".header").removeClass("hidden");
+	// $(".sidenav").removeClass("hidden");
+	// $(".nav-icon").removeClass("hidden");
+});
+
 function handleActivePage() {
 	var activePageFound = false;
 	for (let i = 0; i < 4; ++i) {

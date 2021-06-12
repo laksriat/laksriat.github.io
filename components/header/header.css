@@ -2,6 +2,10 @@
 
 @import url("https://fonts.googleapis.com/css?family=Lato");
 
+.hidden {
+    display: none;
+}
+
 .nav-icon {
 	position: fixed;
 	bottom: 10px;
@@ -68,7 +72,7 @@ svg.line-bottom {
 }
 
 .menu {
-	width: 750px;
+	width: 600px;
 	margin: 0 auto;
 }
 
@@ -123,18 +127,12 @@ polygon {
 	transition: 0.4s;
 }
 
-@media (max-device-width: 1200px) {	
+@media only screen and (max-width: 1210px) {	
 	.nav-header {
-		/* height: 65px;
-		line-height: 65px; */
 		font-size: x-large;
 	}
-	.header {
-		/* height: 65px; */
-	}
 	.menu {
-		width: 650px;		
-		/* visibility: hidden; */
+		width: 550px;
 	}
 	.nav-icon {
 		height: 65px;
@@ -142,14 +140,9 @@ polygon {
 	}
 }
 
-@media (max-device-width: 1000px) {	
+@media only screen and (max-width: 900px) {	
 	.nav-header {
-		/* height: 65px;
-		line-height: 65px; */
 		font-size: large;
-	}
-	.header {
-		/* height: 65px; */
 	}
 	.menu {		
 		visibility: hidden;

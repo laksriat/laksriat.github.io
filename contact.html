@@ -9,10 +9,41 @@
     <link rel="stylesheet" href="/css/contact.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-<body>
+<body class="hidden">
     <div id="header"></div>
     <div id="loader"></div>
+    <div id="body">
+        <div class="contact">
+            <h1>ලක් ශ්‍රි අත්කම් සල</h1>
+            <table>
+                <tr>
+                    <td>Email</td>
+                    <td>: laksriat.cste@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Tel</td>
+                    <td>: +94718151489</td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td>: Galagedara</td>
+                </tr>
+            </table>
+            <button onclick="sendEmail()">Send an Email</button>
+        </div>
+    </div>
     <script src="/components/header/header.js"></script>
     <script src="/components/loader/loader.js"></script>
+    <script>
+        showLoading();
+        $(document).ready(function() {
+            $("body").removeClass("hidden");
+        });
+        hideLoading();
+
+        function sendEmail() {
+            window.open('mailto:laksriat.cste@gmail.com?subject=subject&body=body');
+        }
+    </script>
 </body>
 </html>
