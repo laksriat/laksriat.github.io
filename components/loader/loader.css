@@ -15,7 +15,7 @@
     content: "";
     width: 100px;
     height: 100px;
-    background: url("/laksri/assets/loading-icon.png") 100px 100px;
+    background: url("/assets/loading-icon.png") 100px 100px;
     background-size: contain;
     opacity: 0.5;
     border-radius: 50%;

@@ -6,8 +6,8 @@ const lis = document.querySelectorAll("li");
 const lbs = document.querySelectorAll(".lb");
 const ul = document.querySelector("ul");
 const lineDash = document.querySelector(".line-dash");
-// const routes = ["/laksri/", "/laksri/products.html", "/laksri/contact.html", "/laksri/about.html"];
-const routes = ["/laksri/#", "/laksri/products.html", "/laksri/#contact", "/laksri/#about"];
+// const routes = ["/", "/products.html", "/contact.html", "/about.html"];
+const routes = ["/#", "/products.html", "/#contact", "/#about"];
 const hashes = ["#", "#contact", "#about"];
 
 var dashOrigin = -35; //pixels
@@ -95,7 +95,7 @@ function addHeaderBody() {
 	if (body != undefined) {
 		body.innerHTML = 
 		`
-		<link rel="stylesheet" href="/laksri/components/header/header.css"/>
+		<link rel="stylesheet" href="/components/header/header.css"/>
 		<div class="nav-header">ලක් ශ්‍රි අත්කම් සල</div>
 		<div class="header">
 			<div class="menu-button" onclick="openNav(this)">
@@ -120,15 +120,15 @@ function addHeaderBody() {
 		</div>
 		<div id="mySidenav" class="sidenav">
 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>			
-			<a href="/laksri/">Home</a>
-			<a href="/laksri/products.html">Products</a>
-			<a href="/laksri/contact.html">Contact Us</a>
-			<a href="/laksri/about.html">About</a>
+			<a href="/">Home</a>
+			<a href="/products.html">Products</a>
+			<a href="/contact.html">Contact Us</a>
+			<a href="/about.html">About</a>
 		</div>
 		<div class="nav-icon">
 			<div class="nav-icon-tooltip">Contact Us</div>
 		</div>
-		<script src="/laksri/components/header/header.js"></script>
+		<script src="/components/header/header.js"></script>
 		`;
 	}
 
@@ -137,7 +137,7 @@ function addHeaderBody() {
 
 	});
 	navIcon.addEventListener("click", function() {
-		window.location = "/laksri/contact.html";
+		window.location = "/contact.html";
 	});
 }
 
