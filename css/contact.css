@@ -1,12 +1,9 @@
-body {
-    /* background: gold; */
-}
-
 .hidden {
     display: none;
 }
 
-#body {
+#contact-body {
+    min-height: 100vh;
     padding-top: 75px;
 }
 

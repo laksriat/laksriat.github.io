@@ -1,8 +1,5 @@
-body {
-    /* background: gold; */
-}
-
-#body {
+#about-body {
+    min-height: 100vh;
     padding-top: 75px;
 }
 
@@ -14,4 +11,16 @@ body {
     width: 80%;
     border:orange 1px solid;
     text-align: center;
+}
+
+#languageBtn {
+    position: relative;
+    float: right;
+    right: 0;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
 }

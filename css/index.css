@@ -1,7 +1,3 @@
-body {
-    /* background: gold; */
-}
-
 .hidden {
     display: none;
 }
@@ -18,6 +14,31 @@ body {
     margin-top: 10px;
     margin-left: 20%;
     width: 60%;
+    border-radius: 1rem;
+}
+
+#page-heading {
+    margin-left: 10%;
+    width: 80%;    
+    text-align: center;
+}
+
+#products-types {
+    margin: 20px;
+    display: flex;
+    overflow-x: auto;
+}
+
+#products-types a {
+    width: 250px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: gold;
+    background: linear-gradient(to right, black, black, black, white);
+    border-radius: 1rem
 }
 
 @media only screen and (max-width: 600px) {

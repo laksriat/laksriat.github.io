@@ -9,7 +9,7 @@ function addLoaderBody() {
     if (body != undefined) {
         body.innerHTML = 
         `
-        <link rel="stylesheet" href="/components/loader/loader.css"/>
+        <link rel="stylesheet" href="/laksri/components/loader/loader.css"/>
         <div class="loader">
             <div class="loading-wrapper"></div>    
             <div class="loading-border"> 

@@ -6,7 +6,9 @@ const lis = document.querySelectorAll("li");
 const lbs = document.querySelectorAll(".lb");
 const ul = document.querySelector("ul");
 const lineDash = document.querySelector(".line-dash");
-const routes = ["/", "/products.html", "/contact.html", "/about.html"];
+// const routes = ["/laksri/", "/laksri/products.html", "/laksri/contact.html", "/laksri/about.html"];
+const routes = ["/laksri/#", "/laksri/products.html", "/laksri/#contact", "/laksri/#about"];
+const hashes = ["#", "#contact", "#about"];
 
 var dashOrigin = -35; //pixels
 var selectedLi = -35; //pixels
@@ -40,12 +42,40 @@ function handleActivePage() {
 	for (let i = 0; i < 4; ++i) {
 		if (document.location.pathname == routes[i]) {
 			activePageFound = true;
-			dashOrigin = Math.abs(250 * i);
-			lineDash.attributes.x1.value = dashOrigin;			
-			selectedLi = -250 * i - 35;
-			removeCurrentActive();
-			lis[i].classList.add("active");
-			lbs[i].setAttribute("transform","matrix(1,0,0,1,0,-43)");
+			if (document.location.hash != null && document.location.hash != "") {
+				if (document.location.hash == hashes[0]) {
+					dashOrigin = Math.abs(250 * 2);
+					lineDash.attributes.x1.value = dashOrigin;			
+					selectedLi = -250 * 2 - 35;
+					removeCurrentActive();
+					lis[0].classList.add("active");
+					lbs[0].setAttribute("transform","matrix(1,0,0,1,0,-43)");
+				}
+				else if (document.location.hash == hashes[1]) {					
+					dashOrigin = Math.abs(250 * 3);
+					lineDash.attributes.x1.value = dashOrigin;			
+					selectedLi = -250 * 3 - 35;
+					removeCurrentActive();
+					lis[3].classList.add("active");
+					lbs[3].setAttribute("transform","matrix(1,0,0,1,0,-43)");
+				}
+				else {
+					dashOrigin = Math.abs(250 * 4);
+					lineDash.attributes.x1.value = dashOrigin;			
+					selectedLi = -250 * 4 - 35;
+					removeCurrentActive();
+					lis[4].classList.add("active");
+					lbs[4].setAttribute("transform","matrix(1,0,0,1,0,-43)");
+				}
+			}
+			else {
+				dashOrigin = Math.abs(250 * i);
+				lineDash.attributes.x1.value = dashOrigin;			
+				selectedLi = -250 * i - 35;
+				removeCurrentActive();
+				lis[i].classList.add("active");
+				lbs[i].setAttribute("transform","matrix(1,0,0,1,0,-43)");
+			}
 		}
 	}
 	// if (!activePageFound) {
@@ -65,7 +95,7 @@ function addHeaderBody() {
 	if (body != undefined) {
 		body.innerHTML = 
 		`
-		<link rel="stylesheet" href="/components/header/header.css"/>
+		<link rel="stylesheet" href="/laksri/components/header/header.css"/>
 		<div class="nav-header">ලක් ශ්‍රි අත්කම් සල</div>
 		<div class="header">
 			<div class="menu-button" onclick="openNav(this)">
@@ -90,15 +120,15 @@ function addHeaderBody() {
 		</div>
 		<div id="mySidenav" class="sidenav">
 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>			
-			<a href="/">Home</a>
-			<a href="/products.html">Products</a>
-			<a href="/contact.html">Contact Us</a>
-			<a href="/about.html">About</a>
+			<a href="/laksri/">Home</a>
+			<a href="/laksri/products.html">Products</a>
+			<a href="/laksri/contact.html">Contact Us</a>
+			<a href="/laksri/about.html">About</a>
 		</div>
 		<div class="nav-icon">
 			<div class="nav-icon-tooltip">Contact Us</div>
 		</div>
-		<script src="/components/header/header.js"></script>
+		<script src="/laksri/components/header/header.js"></script>
 		`;
 	}
 
@@ -107,7 +137,7 @@ function addHeaderBody() {
 
 	});
 	navIcon.addEventListener("click", function() {
-		window.location = "/contact.html";
+		window.location = "/laksri/contact.html";
 	});
 }
 
