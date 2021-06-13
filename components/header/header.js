@@ -120,10 +120,10 @@ function addHeaderBody() {
 		</div>
 		<div id="mySidenav" class="sidenav">
 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>			
-			<a href="/">Home</a>
+			<a href="/#">Home</a>
 			<a href="/products.html">Products</a>
-			<a href="/contact.html">Contact Us</a>
-			<a href="/about.html">About</a>
+			<a href="/#contact">Contact Us</a>
+			<a href="/#about">About</a>
 		</div>
 		<div class="nav-icon">
 			<div class="nav-icon-tooltip">Contact Us</div>
