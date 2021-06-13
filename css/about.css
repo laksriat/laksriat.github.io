@@ -12,15 +12,3 @@
     border:orange 1px solid;
     text-align: center;
 }
-
-#languageBtn {
-    position: relative;
-    float: right;
-    right: 0;
-    background-color: Transparent;
-    background-repeat: no-repeat;
-    border: none;
-    cursor: pointer;
-    overflow: hidden;
-    outline: none;
-}

@@ -140,66 +140,6 @@ polygon {
 	}
 }
 
-@media only screen and (max-width: 900px) {	
-	.nav-header {
-		font-size: large;
-	}
-	.menu {		
-		visibility: hidden;
-	}
-	.menu-button {
-		visibility: visible;
-	}
-	.nav-icon {
-		height: 65px;
-		width: 65px;
-	}
-}
-/* 
-@media (max-device-width: 991px) {	
-	.nav-header {
-		height: 65px;
-		line-height: 65px;
-		font-size: x-large;
-	}
-	.header {
-		height: 65px;
-	}
-	.nav-icon {
-		height: 65px;
-		width: 65px;
-	}
-}
-
-@media (max-device-width: 751px) {
-	.nav-header {
-		line-height: 45px;
-		height: 45px;
-		font-size: large;
-	}
-	.header {
-		height: 45px;
-	}
-	.nav-icon {
-		height: 45px;
-		width: 45px;
-	}
-}
-
-@media (max-device-width: 451px) {
-	.nav-header {
-		line-height: 45px;
-		height: 45px;
-		font-size: large;
-	}
-	.header {
-		height: 45px;
-	}
-	.nav-icon {
-		height: 45px;
-		width: 45px;
-	}
-} */
 .sidenav {
 	height: 100%;
 	width: 0;
@@ -213,28 +153,59 @@ polygon {
 	padding-top: 60px;
   }
   
-  .sidenav a {
+.sidenav a {
 	padding: 8px 8px 8px 32px;
 	text-decoration: none;
 	font-size: 25px;
 	color: #818181;
 	display: block;
 	transition: 0.3s;
-  }
-  
-  .sidenav a:hover {
+}
+
+.sidenav a:hover {
 	color: #f1f1f1;
-  }
-  
-  .sidenav .closebtn {
+}
+
+.sidenav .closebtn {
 	position: absolute;
 	top: 0;
 	right: 25px;
 	font-size: 36px;
 	margin-left: 50px;
-  }
+}  
+
+#languageBtn {
+    position: fixed;
+    top: 25px;
+    right: 0;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+@media only screen and (max-width: 900px) {	
+	.nav-header {
+		font-size: large;
+	}
+	.menu {		
+		visibility: hidden;
+	}
+	.menu-button {
+		visibility: visible;
+	}
+	#languageBtn {	
+		top: 85px;
+	}
+	.nav-icon {
+		height: 65px;
+		width: 65px;
+	}
+}
   
-  @media screen and (max-height: 450px) {
+@media screen and (max-height: 450px) {
 	.sidenav {padding-top: 15px;}
 	.sidenav a {font-size: 18px;}
-  }
+}
