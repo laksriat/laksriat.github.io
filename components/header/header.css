@@ -1,0 +1,211 @@
+/*   DESKTOP DEMO OF SVG EFFECTS. */
+
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
+.hidden {
+    display: none;
+}
+
+.nav-icon {
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	border-radius: 50%;
+	z-index: 10;
+	content: "";
+	width: 75px;
+	height: 75px;
+	background: url("/laksri/assets/logo.png") 75px 75px;
+	background-size: contain;
+}
+
+.nav-icon-tooltip {
+	visibility: hidden;
+	position: fixed;
+	bottom: 85px;
+	right: 10px;
+	z-index: 10000;
+	color: black;
+}
+
+.nav-icon:hover .nav-icon-tooltip{
+	visibility: visible;
+}
+
+.nav-header {
+	position: fixed;
+    color: orange; 
+	z-index: 10;
+	font-size: xx-large;
+	height: 75px;
+	line-height: 75px;
+	margin-left: 20px;
+}
+
+.header {
+	position: fixed;
+	width: 100%;
+	height: 75px;
+	background: #17141d;
+	opacity: 0.95;
+	overflow: hidden;
+	-webkit-box-shadow: #333 1px 3px 4px;
+	-moz-box-shadow: #333 1px 3px 4px;
+	box-shadow: #333 1px 3px 4px;
+}
+
+.line-dash {
+    stroke: orange; 
+    stroke-width:2; 
+    stroke-linecap:round; 
+    stroke-dasharray: 180,1200; 
+    stroke-dashoffset: -35;
+}
+
+svg.line-top {
+	width: 100%;
+	background-color: #17141d;
+}
+
+svg.line-bottom {
+	width: 100%;
+}
+
+.menu {
+	width: 600px;
+	margin: 0 auto;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+ul li {
+	margin: 0;
+	padding: 10px 0 10px 0;
+	width: 25%;
+	height: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	letter-spacing: 3.5px;
+	transition: all 0.5s ease-out;
+}
+
+li.active {
+	color: orange;
+	transform: scale(1.1);
+}
+
+polygon {
+	stroke-width: 2px;
+	stroke: orange;
+	fill: orange;
+}
+
+.menu-button {
+	position: absolute;
+	right: 20px;
+	z-index: 1000;
+	height: 75px;
+	line-height: 75px;
+	display: inline-block;
+	cursor: pointer;
+	padding: 25px 0px;
+	visibility: hidden;
+}
+  
+.bar1, .bar2, .bar3 {
+	width: 25px;
+	height: 5px;
+	background-color: orange;
+	margin: 5px 0;
+	transition: 0.4s;
+}
+
+@media only screen and (max-width: 1210px) {	
+	.nav-header {
+		font-size: x-large;
+	}
+	.menu {
+		width: 550px;
+	}
+	.nav-icon {
+		height: 65px;
+		width: 65px;
+	}
+}
+
+.sidenav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 10000;
+	top: 0;
+	left: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+  }
+  
+.sidenav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+}
+
+.sidenav a:hover {
+	color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}  
+
+#languageBtn {
+    position: fixed;
+    top: 25px;
+    right: 0;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+@media only screen and (max-width: 900px) {	
+	.nav-header {
+		font-size: large;
+	}
+	.menu {		
+		visibility: hidden;
+	}
+	.menu-button {
+		visibility: visible;
+	}
+	#languageBtn {	
+		top: 85px;
+	}
+	.nav-icon {
+		height: 65px;
+		width: 65px;
+	}
+}
+  
+@media screen and (max-height: 450px) {
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 18px;}
+}

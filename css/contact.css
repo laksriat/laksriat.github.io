@@ -1,0 +1,30 @@
+.hidden {
+    display: none;
+}
+
+#contact-body {
+    min-height: 100vh;
+    padding-top: 75px;
+}
+
+.contact {
+    margin-top: 10px;
+    margin-left: 10%;
+    padding-bottom: 10px;
+    width: 80%;
+    border:orange 1px solid;
+    text-align: center;
+}
+
+table {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button {
+    background: black;
+    color: orange;
+    padding: 0.2rem 1rem;
+    border-radius: 1rem;
+}

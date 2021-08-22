@@ -1,0 +1,14 @@
+#about-body {
+    min-height: 100vh;
+    padding-top: 75px;
+}
+
+.about {
+    font-size: large;
+    margin-top: 10px;
+    margin-left: 10%;
+    padding-bottom: 10px;
+    width: 80%;
+    border:orange 1px solid;
+    text-align: center;
+}
